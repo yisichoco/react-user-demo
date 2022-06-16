@@ -26,6 +26,24 @@ Content-Type: application/json
 {"name":"Screwdriver", "username": "sc","password":"12345", "email":"sc@gmail.com"}
 ```
 
+---
+
+- **Success Response:**
+
+  - **Code:** 200 <br />
+    **Content:** `{"id": 5, "name":"Screwdriver", "username": "sc","password":"12345", "email":"sc@gmail.com"}`
+
+- **Error Response:**
+
+  - **Code:** 404 NOT FOUND <br />
+    **Content:** `{ error : "會員不存在" }`
+
+  或
+
+  - **Code:** 401 UNAUTHORIZED <br />
+    **Content:** `{ error : "你沒有能進行這個要求的授權" }`
+
+
 ### 登入
 
 會員登入
