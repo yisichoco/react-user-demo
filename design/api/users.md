@@ -19,6 +19,13 @@ Content-Type: application/json
 {"name":"Screwdriver", "username": "sc","password":"12345", "email":"sc@gmail.com"}
 ```
 
+```
+POST /users HTTP/1.1
+Content-Type: application/json
+
+{"name":"Screwdriver", "username": "sc","password":"12345", "email":"sc@gmail.com"}
+```
+
 ### 登入
 
 會員登入
@@ -28,5 +35,35 @@ POST /login HTTP/1.1
 Content-Type: application/json
 
 {"username": "sc","password":"12345"}
+```
+
+### 登出
+
+會員登入
+
+```
+POST /logout HTTP/1.1
+Content-Type: application/json
+
+{"username": "sc"}
+```
+
+### 獲得會員資料
+
+獲得會員資料(by id)
+
+```
+GET /users/123 HTTP/1.1
+```
+
+### 修改會員資料
+
+修改會員資料(by id)
+
+```
+PUT /users/123 HTTP/1.1
+Content-Type: application/json
+
+{"name":"Screwdriver", "username": "sc","password":"66666", "email":"sc@gmail.com"}
 ```
 
