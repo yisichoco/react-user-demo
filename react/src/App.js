@@ -34,6 +34,8 @@ import MultiLevelMatchBreadCrumb from './components/MultiLevelMatchBreadCrumb'
 
 function App() {
   const [auth, setAuth] = useState(false)
+  // 會員登入後會設定到這裡當全域狀態
+  const [userId, setUserId] = useState(1)
 
   return (
     <Router>
@@ -49,13 +51,13 @@ function App() {
           <ScrollToTop>
             <Switch>
               <Route path="/member/login">
-                <Login />
+                <Login setUserId={setUserId} />
               </Route>
               <Route path="/member/register">
                 <Register />
               </Route>
               <Route path="/member/profile">
-                <Profile />
+                <Profile userId={userId} />
               </Route>
               <Route path="/student">
                 <Student />

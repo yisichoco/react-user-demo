@@ -16,10 +16,28 @@ function Register(props) {
 
     setUserData(newUserData)
   }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+
+    const response = await fetch('/users', {
+      method: 'POST',
+      body: JSON.stringify(userData),
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+      },
+    })
+
+    const data = await response.json()
+
+    console.log(data)
+  }
+
   return (
     <>
       <h1>會員註冊</h1>
-      <form>
+      <form onSubmit={handleSubmit}>
         <div>
           <label>姓名</label>
           <input
