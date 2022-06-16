@@ -28,12 +28,12 @@ Content-Type: application/json
 
 ---
 
-- **Success Response:**
+- **成功回應 Success Response:**
 
   - **Code:** 200 <br />
     **Content:** `{"id": 5, "name":"Screwdriver", "username": "sc","password":"12345", "email":"sc@gmail.com"}`
 
-- **Error Response:**
+- **錯誤回應 Error Response:**
 
   - **Code:** 404 NOT FOUND <br />
     **Content:** `{ error : "會員不存在" }`
