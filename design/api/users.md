@@ -19,6 +19,8 @@ Content-Type: application/json
 {"name":"Screwdriver", "username": "sc","password":"12345", "email":"sc@gmail.com"}
 ```
 
+或
+
 ```
 POST /users HTTP/1.1
 Content-Type: application/json
